@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Ruby Standard Gems</title>
+
+    <meta name="description" content="Ruby Standard Gems">
+    <meta name="author" content="Jan Lelis">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="lib/css/github.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <style>
+      .reveal section img {
+        box-shadow: none;
+        border: 0px;
+      }
+      .reveal section img.no-shadow {
+        /*box-shadow: none;*/
+        background: #f3f3f3;
+      }
+      .reveal pre code {
+        font-size: 20pt;
+        line-height: 23pt;
+        /*margin: 0px -200px;*/
+        margin-top: 2em;
+        /*border: 1px solid #ccc !important;*/
+      }
+      pre{
+        /*box-shadow: none !important;*/
+      }
+      /*.reveal pre .xml .ruby {
+        opacity: 1;
+        color: #fff;
+      }*/
+
+      .reveal p {
+        font-size: 33pt;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <section>
+            <img src="images/idiosyncratic.png"/>
+            <h1 style="font-size: 300%">Ruby Standard Gems</h1>
+            <br/>
+
+            <p><a href="https://twitter.com/JanLelis">@JanLelis</a> — <a href="http://berlin.onruby.de/">EuRuKo Budapest</a> — <a href="https://twitter.com/JanLelis">October 2017</a></p>
+          </section>
+
+          <section>
+            <img src="images/idiosyncratic.png"/>
+            <h2><a href="http://idiosyncratic-ruby.com">idiosyncratic-ruby.com</a></h2>
+
+            <p>Documenting All Ruby Specialities</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Gemification</h1>
+            <p>STANDARD LIBRARIES WILL BECOME GEMS</p>
+            <p class="fragment">To be completed by Ruby 2.5 or 3.0</p>
+            <p class="fragment">Led by <strong>SHIBATA Hiroshi</strong></p>
+            <p class="fragment">Difference between <em>default gems</em> and <em>bundled gems</em></p>
+          </section>
+
+          <section>
+            <h2>Default Gems</h2>
+            <p>Part of Ruby source</p>
+            <p class="fragment">Cannot be removed</p>
+            <p class="fragment">Maintained by Ruby core</p>
+            <p class="fragment">Examples: <strong>openssl</strong>, <strong>json</strong>, <strong>rdoc</strong></p>
+            <p class="fragment">With 2.5: <strong>bundler</strong></p>
+          </section>
+
+          <section>
+            <h2>Bundled Gems</h2>
+            <p>Similar to "normal" gems</p>
+            <p class="fragment">Automatically installed alongside Ruby</p>
+            <p class="fragment">Maintained externally</p>
+            <p class="fragment">Examples: <strong>minitest</strong>, <strong>rake</strong>, <strong>did_you_mean</strong></p>
+          </section>
+
+          <section>
+            <h1>Why?</h1>
+          </section>
+
+          <section>
+            <h2>PROS</h2>
+            <ul>
+              <li>Gems can be developed independly from Ruby</li>
+              <li class="fragment">Maintanance across different Ruby implementations (JRuby)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>CONS</h2>
+            <ul>
+              <li>Dependency hell!?</li>
+              <li class="fragment">Where to do pull requests?
+                <ul>
+                  <li>In gem repository or in Ruby's Redmine?</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>stdgems.org</h2>
+
+            <img src="images/stdgems-org.png"/>
+          </section>
+
+          <section>
+            <h2>PROGRESS</h2>
+            <ul>
+              <li>Unmaintained libraries get attention
+              <ul class="fragment">
+                <li>…maybe get maintained again</li>
+                <li>…or maybe get removed! Or replaced!</li>
+              </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Thank you!</h2>
+
+            <p>…and a happy day two!</p>
+            <br/>
+            <p><a href="https://stdgems.org">stdgems.org</a> — <a href="https://idiosyncratic-ruby.com">idiosyncratic-ruby.com</a></p>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+
+        theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
